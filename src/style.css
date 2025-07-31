@@ -1,0 +1,158 @@
+/* Estilo base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  .page-wrapper {
+    width: 100%;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #004b87;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .brand-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .cta-button {
+    margin-left: auto;
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-image: url('https://images.unsplash.com/photo-1581092334669-7a68b4f9198c');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  .hero-content {
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .cta-secondary {
+    margin-top: 1rem;
+    background-color: #ff4b2b;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Servicios */
+  .services-section {
+    padding: 4rem 2rem;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .service-card {
+    background: #f3f3f3;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .service-icon {
+    width: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .service-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .service-description {
+    font-size: 0.95rem;
+  }
+  
+  /* Contacto */
+  .contact-section {
+    padding: 3rem 2rem;
+    background-color: #fafafa;
+    text-align: center;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .contact-form label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #004b87;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
