@@ -101,17 +101,20 @@ export default function App() {
         <a href="/politica-cookies" className="footer-link">Política de Cookies</a>
       </footer>
 
-      {/* Cookies Popup */}
+      {/* Cookies Modal */}
       {cookiesVisible && (
-        <div className="cookie-popup">
-          <p>
-            Utilizamos cookies propias para garantizar el correcto funcionamiento de la web y mejorar tu experiencia.{' '}
-            <a href="/politica-cookies" target="_blank" rel="noopener noreferrer">Política de cookies</a>
-          </p>
-          <div className="cookie-buttons">
-            <button onClick={() => handleCookieChoice("necessary")} className="cookie-btn neutral">Aceptar necesarias</button>
-            <button onClick={() => handleCookieChoice("reject")} className="cookie-btn reject">Rechazar</button>
-            <button onClick={() => handleCookieChoice("accept")} className="cookie-btn accept">Aceptar todas</button>
+        <div className="cookie-modal-overlay">
+          <div className="cookie-modal">
+            <h2>Así utilizamos las cookies</h2>
+            <p>
+              HelpLine Consultores, como responsable del tratamiento de tus datos, utilizará si tú lo consientes cookies propias para garantizar el correcto funcionamiento de esta web y mejorar tu experiencia. Puedes obtener más información consultando nuestra{' '}
+              <a href="/politica-cookies" target="_blank" rel="noopener noreferrer">Política de cookies</a>.
+            </p>
+            <div className="cookie-buttons-modal">
+              <button onClick={() => handleCookieChoice("accept")} className="cookie-btn accept">Aceptar cookies</button>
+              <button onClick={() => handleCookieChoice("reject")} className="cookie-btn reject">Rechazar cookies</button>
+              <button onClick={() => handleCookieChoice("necessary")} className="cookie-btn neutral">Aceptar solo necesarias</button>
+            </div>
           </div>
         </div>
       )}
