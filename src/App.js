@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 export default function App() {
   const [cookiesVisible, setCookiesVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
@@ -19,9 +21,17 @@ export default function App() {
       {/* Header */}
       <header className="navbar">
         <div className="navbar-content">
-          <img src="/logo-helpline.png" alt="HelpLine Logo" className="logo" />
-          <span className="brand-name">HelpLine Consultores S.L</span>
-          <button className="cta-button">Solicita Presupuesto</button>
+          <img
+            src="/logo-helpline.png"
+            alt="HelpLine Logo"
+            className="logo"
+            onClick={() => navigate("/")}
+            style={{ cursor: "pointer" }}
+          />
+          <span className="brand-name" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
+            HelpLine Consultores S.L
+          </span>
+          <button className="cta-button" onClick={() => navigate("/")}>Solicita Presupuesto</button>
         </div>
       </header>
 
@@ -33,7 +43,7 @@ export default function App() {
           <p className="hero-subtitle">
             Confía en HelpLine Consultores S.L para tus necesidades técnicas en hogar y empresa
           </p>
-          <button className="cta-secondary">Contacta con Nosotros</button>
+          <button className="cta-secondary" onClick={() => navigate("/")}>Contacta con Nosotros</button>
         </div>
       </section>
 
