@@ -267,3 +267,61 @@ body, html {
   text-align: center;
   text-decoration: underline;
 }
+
+/* COOKIE INFO */
+
+.cookies-wrapper {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+.cookies-header {
+  background-color: #0d2563;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cookies-logo {
+  height: 50px;
+}
+
+.cookies-title {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.cookies-content {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.cookies-content h2 {
+  margin-top: 2rem;
+  color: #0d2563;
+}
+
+.cookies-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.cookies-content table th,
+.cookies-content table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.cookies-footer {
+  background-color: #0d2563;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}

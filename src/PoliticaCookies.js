@@ -1,55 +1,57 @@
 import React from "react";
-import "./style.css";
+import "./style.css"; // mismo CSS que usas en el resto de la web
 
 export default function PoliticaCookies() {
   return (
-    <div className="page-wrapper cookies-page">
-      <h1>Política de Cookies</h1>
-      <p>
-        En HelpLine Consultores S.L queremos que nuestros usuarios estén perfectamente informados sobre el uso de cookies en esta web. Nuestro objetivo es garantizar una experiencia transparente, segura y conforme con la legislación vigente.
-      </p>
+    <div className="cookies-wrapper">
+      <header className="cookies-header">
+        <img src="/logo-helpline.png" alt="Logo HelpLine" className="cookies-logo" />
+        <h1 className="cookies-title">Política de Cookies</h1>
+      </header>
 
-      <h2>¿Qué son las cookies?</h2>
-      <p>
-        Las cookies son pequeños archivos que se almacenan en el dispositivo del usuario al navegar por internet. Se utilizan para recordar información sobre la visita y facilitar futuras interacciones con el sitio web.
-      </p>
+      <main className="cookies-content">
+        <p>Esta Política de Cookies explica qué son las cookies y cómo las utilizamos en HelpLine Consultores S.L.</p>
 
-      <h2>Tipos de cookies utilizadas</h2>
+        <h2>¿Qué son las cookies?</h2>
+        <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Su propósito es recordar tus preferencias y mejorar tu experiencia de navegación.</p>
 
-      <h3>1. Cookies propias:</h3>
-      <ul>
-        <li><strong>cookieConsent</strong> – Almacena el consentimiento del usuario para mostrar o no el aviso de cookies. (Caducidad: 12 meses)</li>
-        <li><strong>sessionId</strong> – Identificador de sesión anónimo temporal. (Caducidad: sesión)</li>
-        <li><strong>cartId</strong> – Identificador del carrito de compras si aplica. (Caducidad: sesión)</li>
-      </ul>
+        <h2>¿Qué tipos de cookies utilizamos?</h2>
+        <ul>
+          <li><strong>Cookies técnicas o necesarias:</strong> Son esenciales para el funcionamiento básico del sitio.</li>
+          <li><strong>Cookies de personalización:</strong> Permiten adaptar el contenido a tus preferencias.</li>
+          <li><strong>Cookies analíticas:</strong> Nos ayudan a entender cómo interactúan los usuarios con nuestro sitio.</li>
+        </ul>
 
-      <h3>2. Cookies de terceros:</h3>
-      <p>Actualmente esta web no utiliza cookies de terceros.</p>
+        <h2>Cookies utilizadas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Finalidad</th>
+              <th>Duración</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>cookieConsent</td>
+              <td>Propia</td>
+              <td>Almacena la elección del consentimiento</td>
+              <td>1 año</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <h2>Finalidades del uso de cookies</h2>
-      <ul>
-        <li>Garantizar el correcto funcionamiento del sitio web.</li>
-        <li>Recordar preferencias del usuario (por ejemplo, idioma o sesión).</li>
-        <li>Mejorar la experiencia de navegación.</li>
-      </ul>
+        <h2>Gestión de cookies</h2>
+        <p>Puedes permitir, bloquear o eliminar las cookies desde la configuración de tu navegador.</p>
 
-      <h2>Legislación aplicable</h2>
-      <p>
-        Esta política cumple con la Ley 34/2002 de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), el Reglamento (UE) 2016/679 (RGPD), la Ley Orgánica 3/2018 (LOPDGDD), así como con el estándar internacional del <em>Data Privacy Framework</em>.
-      </p>
+        <h2>Actualizaciones</h2>
+        <p>Revisa esta política regularmente para estar al tanto de cualquier cambio.</p>
+      </main>
 
-      <h2>Cómo gestionar o eliminar cookies</h2>
-      <p>
-        Puedes configurar tu navegador para aceptar, bloquear o eliminar cookies instaladas. Consulta los siguientes enlaces:
-      </p>
-      <ul>
-        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
-        <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies" target="_blank">Mozilla Firefox</a></li>
-        <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank">Safari</a></li>
-        <li><a href="https://support.microsoft.com/es-es/windows" target="_blank">Microsoft Edge</a></li>
-      </ul>
-
-      <p>Última actualización: 1 de agosto de 2025</p>
+      <footer className="cookies-footer">
+        <p>© {new Date().getFullYear()} HelpLine Consultores S.L – Todos los derechos reservados</p>
+      </footer>
     </div>
   );
 }
