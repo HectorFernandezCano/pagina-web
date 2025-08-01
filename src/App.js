@@ -42,7 +42,7 @@ export default function App() {
             },
             {
               title: "Fontanería",
-              icon: "https://cdn-icons-png.flaticon.com/512/5904/5904173.png",
+              icon: "/foto-font.jpg",
               description: "Reparación e instalación de redes de agua y saneamiento.",
             },
           ].map((service, index) => (
