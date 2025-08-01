@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 
 export default function App() {
+  const [cookiesVisible, setCookiesVisible] = useState(false);
+
+  useEffect(() => {
+    const consent = localStorage.getItem("cookieConsent");
+    if (!consent) setCookiesVisible(true);
+  }, []);
+
+  const handleCookieChoice = (choice) => {
+    localStorage.setItem("cookieConsent", choice);
+    setCookiesVisible(false);
+  };
+
   return (
     <div className="page-wrapper">
       {/* Header */}
@@ -33,18 +45,18 @@ export default function App() {
             {
               title: "Instalaciones Eléctricas",
               icon: "/foto-inst-electricas.jpg",
-              description: "Montaje, mantenimiento y reformas eléctricas seguras y certificadas.",
+              description: "Montaje, mantenimiento y reformas eléctricas seguras y certificadas."
             },
             {
               title: "Climatización y Calefacción",
               icon: "/foto-clima-calefa.jpg",
-              description: "Instalación de sistemas eficientes para confort todo el año.",
+              description: "Instalación de sistemas eficientes para confort todo el año."
             },
             {
               title: "Fontanería",
               icon: "/foto-font.jpg",
-              description: "Reparación e instalación de redes de agua y saneamiento.",
-            },
+              description: "Reparación e instalación de redes de agua y saneamiento."
+            }
           ].map((service, index) => (
             <div className="service-card" key={index}>
               <img src={service.icon} alt={`Icono de ${service.title}`} className="service-icon" />
@@ -86,7 +98,23 @@ export default function App() {
         <p>Calle Monasterio de Irache, 9 · 28691 Villanueva de la Cañada (Madrid)</p>
         <p>Tel: 659 90 60 20 · 659 90 60 22</p>
         <p>© {new Date().getFullYear()} HelpLine Consultores S.L - Todos los derechos reservados</p>
+        <a href="/politica-cookies" className="footer-link">Política de Cookies</a>
       </footer>
+
+      {/* Cookies Popup */}
+      {cookiesVisible && (
+        <div className="cookie-popup">
+          <p>
+            Utilizamos cookies propias para garantizar el correcto funcionamiento de la web y mejorar tu experiencia.{' '}
+            <a href="/politica-cookies" target="_blank" rel="noopener noreferrer">Política de cookies</a>
+          </p>
+          <div className="cookie-buttons">
+            <button onClick={() => handleCookieChoice("necessary")} className="cookie-btn neutral">Aceptar necesarias</button>
+            <button onClick={() => handleCookieChoice("reject")} className="cookie-btn reject">Rechazar</button>
+            <button onClick={() => handleCookieChoice("accept")} className="cookie-btn accept">Aceptar todas</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
