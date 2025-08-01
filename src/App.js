@@ -6,7 +6,7 @@ export default function App() {
 
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
-    if (!consent) setCookiesVisible(true);
+    setCookiesVisible(true);
   }, []);
 
   const handleCookieChoice = (choice) => {
