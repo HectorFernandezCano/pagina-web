@@ -57,14 +57,28 @@ export default function App() {
 
       {/* Contacto */}
       <section className="contact-section">
-        <h2 className="section-title">Contáctanos</h2>
-        <form className="contact-form">
-          <label>Nombre<input type="text" /></label>
-          <label>Email<input type="email" /></label>
-          <label>Teléfono<input type="tel" /></label>
-          <label>Mensaje<textarea rows="5"></textarea></label>
-          <button type="submit">Enviar Mensaje</button>
-        </form>
+        <div className="contact-container">
+          <h2 className="section-title">Contáctanos</h2>
+          <form className="contact-form">
+            <div className="form-group">
+              <label htmlFor="nombre">Nombre</label>
+              <input type="text" id="nombre" placeholder="Tu nombre" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" placeholder="tu@email.com" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="telefono">Teléfono</label>
+              <input type="tel" id="telefono" placeholder="+34 600 000 000" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="mensaje">Mensaje</label>
+              <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <button type="submit" className="cta-button-form">Enviar Mensaje</button>
+          </form>
+        </div>
       </section>
 
       {/* Footer */}
