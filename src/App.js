@@ -32,7 +32,7 @@ export default function App() {
           {[
             {
               title: "Instalaciones Eléctricas",
-              icon: "https://cdn-icons-png.flaticon.com/512/9424/9424714.png",
+              icon: "/foto-inst-electricas.jpg",
               description: "Montaje, mantenimiento y reformas eléctricas seguras y certificadas.",
             },
             {
