@@ -37,7 +37,7 @@ export default function App() {
             },
             {
               title: "Climatización y Calefacción",
-              icon: "https://cdn-icons-png.flaticon.com/512/891/891419.png",
+              icon: "/foto-clima-calefa.jpg",
               description: "Instalación de sistemas eficientes para confort todo el año.",
             },
             {
